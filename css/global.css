@@ -82,7 +82,6 @@ header div a:hover {
   padding: 4px 8px;
   background-color: var(--brown);
   color: white;
-  padding: 5px 10px;
   text-decoration: underline;
   border-radius: 10px;
 }
@@ -180,7 +179,6 @@ nav.path {
   margin: 5px;
   font-size: 0.75em;
   border: none;
-  
 }
 
 a.path {

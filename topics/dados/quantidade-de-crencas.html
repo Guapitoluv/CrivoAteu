@@ -2,35 +2,12 @@
 
 <html>
 <head>
-  <meta
-    http-equiv="CONTENT-TYPE"
-    content="text/html; charset=UTF-8">
-  
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  
-  <link
-    rel="stylesheet"
-    href="style.css">
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.">
+  <link rel="stylesheet" href="../../css/global.css">
   <title>CrivoAteu-Topics</title>
 </head>
 <body>
-  <header>
-    <div>
-      <h1>CrivoAteu</h1>
-      
-      <nav>
-        <a href="index.html">Home</a>
-        <a class="inside topic" href="#">Topics</a>
-        <a href="#">News</a>
-        <a href="#">Options</a>
-        <a href="#">About</a>
-      </nav>
-    </div>
-  </header>
-  
   <main>
     <article>
       <ul>
@@ -42,5 +19,12 @@
       <a href="#">fonte</a>
     </article>
   </main>
+  
+  <script type="module">
+    import { HeaderContainer } from '../../js/components/header.js';
+    new HeaderContainer(2, {
+      "senso de crenças": "#"
+    }, "topics").render();
+  </script>
 </body>
 </html>

@@ -2,44 +2,12 @@
 
 <html>
 <head>
-  <meta
-    http-equiv="CONTENT-TYPE"
-    content="text/html; charset=UTF-8">
-  
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  
-  <link
-    rel="stylesheet"
-    href="../style.css">
-  
-  <title>CrivoAteu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.">
+  <link rel="stylesheet" href="../css/global.css">
+  <title>CrivoAteu-Topics</title>
 </head>
 <body>
-  <header>
-    <div>
-      <h1>CrivoAteu</h1>
-      
-      <nav>
-        <a href="../index.html">Home</a>
-        <a
-          class="inside topic"
-          href="../topics.html">
-          Topics
-        </a>
-        <a href="#">News</a>
-        <a href="#">Options</a>
-        <a href="#">About</a>
-      </nav>
-      
-      <nav class="path">
-        <a class="path" href="../topics.html">Topics</a> > 
-        <a class="path" href="#">Argumentos ateístas</a>
-      </nav>
-    </div>
-  </header>
-  
   <main>
     <article>
       <h2>O problema do mal</h2>
@@ -51,5 +19,12 @@
       </p>
     </article>
   </main>
+  
+  <script type="module">
+    import { HeaderContainer } from '../js/components/header.js';
+    new HeaderContainer(1, {
+      "argumentos ateístas": "#"
+    }, "topics").render();
+  </script>
 </body>
 </html>
