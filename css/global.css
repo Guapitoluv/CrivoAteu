@@ -1,6 +1,29 @@
 :root {
   --milkglass: #F2F0E7;
-  --brown: #895129;
+  --chocolate: #493327;
+  --dark-chocolate: #2D231B;
+  --light-bg-color: var(--milkglass);
+  --dark-bg-color: var(--dark-chocolate);
+  --bg-color: var(--light-bg-color);
+  --header-container-color: var(--milkglass);
+  --color1: var(--milkglass);
+  --color2: #895129;
+  --color3: var(--chocolate);
+  --color4: #bc9e8260;
+  --boxes-border-color: black;
+  --font-color: black;
+  --activated-navlink-color: var(--color2);
+  --activated-navlink-font-color: white;
+  --global-font-size: 1em;
+}
+
+:root.dark {
+  --bg-color: var(--dark-bg-color);
+  --header-container-color: var(--chocolate);
+  --boxes-border-color: white;
+  --font-color: white;
+  --activated-navlink-color: var(--milkglass);
+  --activated-navlink-font-color: black;
 }
 
 * {
@@ -30,8 +53,13 @@ html {
 }
 
 body {
-  background-color: var(--milkglass);
+  background-color: var(--bg-color);
   font-family: sans-serif;
+  /*font-size: var(--global-font-size);*/
+}
+
+body h1, h3, a {
+  color: var(--font-color);
 }
 
 header {
@@ -41,8 +69,8 @@ header {
 }
 
 header div {
-  background-color: var(--milkglass);
-  border: 3px solid black;
+  background-color: var(--header-container-color);
+  border: 3px solid var(--boxes-border-color);
   padding: 10px;
   padding-bottom: 1px;
   margin: 10px;
@@ -65,30 +93,57 @@ header div h1:hover {
 header div nav {
   display: flex;
   align-items: center;
-  border: 3px solid black;
+  border: 3px solid var(--boxes-border-color);
   padding: 5px;
   margin-bottom: 10px;
   gap: 10px
 }
 
 header div a {
-  color: black;
   text-decoration: none;
-  margin: 5px;
+  margin: 1px;
   transition: 0.5s ease;
+}
+
+header div nav.path a:not(:last-child)::after {
+  content: ">";
+  margin: 0px;
+  margin-left: 10px;
 }
 
 header div a:hover {
   padding: 4px 8px;
-  background-color: var(--brown);
-  color: white;
-  text-decoration: underline;
+  background-color: var(--activated-navlink-color);
+  color: var(--activated-navlink-font-color);
   border-radius: 10px;
 }
 
+header div a:activate {
+  padding: 3px 6px;
+  text-decoration: underline;
+}
+
+nav.path {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  
+  align-items: center;
+  padding: 0px;
+  margin: 5px;
+  font-size: 0.75em;
+  border: none;
+}
+
+a.path {
+  flex: 0 0 auto;
+  padding: 0px;
+  margin: 0px;
+}
+
 .inside {
-  background-color: var(--brown);
-  color: white;
+  background-color: var(--activated-navlink-color);
+  color: var(--activated-navlink-font-color);
   padding: 5px 10px;
   border-radius: 10px;
 }
@@ -106,7 +161,8 @@ main {
 }
 
 main article {
-  border: 3px solid black;
+  background-color: var(--header-container-color);
+  border: 3px solid var(--boxes-border-color);
   max-width: 600px;
   width: 85%;
   padding: 10px;
@@ -119,8 +175,8 @@ main article:hover {
 }
 
 main article h2 {
-  background-color: var(--brown);
-  color: var(--milkglass);
+  background-color: var(--activated-navlink-color);
+  color: var(--activated-navlink-font-color);
   padding: 5px 20px;
   margin: 10px;
   border-radius: 10px;
@@ -145,7 +201,7 @@ ul {
   list-style-position: inside;
   padding: 10px 30px;
   margin: 20px;
-  background-color: #bc9e8260;
+  background-color: var(--color4);
 }
 
 ul li {
@@ -169,20 +225,49 @@ ul a:hover {
   column-count: 2;
 }
 
-nav.path {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  
-  align-items: center;
-  padding: 0px;
-  margin: 5px;
-  font-size: 0.75em;
-  border: none;
+button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--activated-navlink-color);
+  color: var(--activated-navlink-font-color);
+  border: 0px;
+  transition: 0.5s ease;
 }
 
-a.path {
-  flex: 0 0 auto;
-  padding: 0px;
-  margin: 0px;
+button:hover {
+  padding: 12px;
+}
+
+button:active {
+  padding: 8px;
+  margin: 4px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  display: block;
+  justify-self: center; 
+  width: 90%;
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+  background: var(--activated-navlink-color);
+  margin: 10px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--activated-navlink-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: green;
+  border-radius: 50%;
+  cursor: pointer;
 }

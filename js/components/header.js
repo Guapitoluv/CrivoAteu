@@ -24,16 +24,15 @@ export class HeaderContainer {
             "about": "./about.html"
         }
         const correct_names={
-            "index": "home",
-            "topics": "topics",
-            "news": "news",
-            "options": "options",
-            "about": "about"
+            "index": "Home",
+            "topics": "Topics",
+            "news": "News",
+            "options": "Options",
+            "about": "About"
         }
         let navlink;
         
         navlink_names.forEach((navlink_name) => {
-            console.log("navlink_name: " + navlink_name + ".")
             navlink=document.createElement("a")
             navlink.textContent=correct_names[navlink_name]
             
@@ -59,7 +58,6 @@ export class HeaderContainer {
             initlink.className="path";
             initlink.textContent=this.current_page;
             initlink.href="../".repeat(this.depth)+routes[this.current_page];
-            console.log(initlink.href);
             np.className="path";
             np.append(initlink);
             Object.entries(this.navpath).forEach(([k, v]) => {
@@ -78,7 +76,6 @@ export class HeaderContainer {
     
     getCurrentPage() {
       const file=this.window_path.split('/').pop();
-    
       return file?file.replace('.html', ''):'index';
     }
 }

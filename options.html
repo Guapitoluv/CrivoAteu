@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.">
+  <link rel="stylesheet" href="css/global.css">
+  <title>CrivoAteu</title>
+</head>
+<body>
+  
+  <main>
+    <article>
+      <div class="slider-container">
+        <h3>Font Size</h3>
+        <input type="range" id="myRange" min="-5" max="5" value="0" class="slider">
+        <p>Value: <span id="valueDisplay">1</span></p>
+      </div>
+      
+      <button id="myButton" type="button">DarkMode</button>
+    </article>
+    
+    <article>
+      <h2>Block Title</h2>
+      
+      <h3>Inner Topic</h3>
+      
+      <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing
+          elitr, sed diam nonumy eirmod tempor invidunt ut
+          labore et dolore magna aliquyam erat, sed diam
+          voluptua. At vero eos et accusam et justo duo
+          dolores et ea rebum. Stet clita kasd gubergren,
+          no sea takimata sanctus est Lorem ipsum dolor sit
+          amet. Lorem ipsum dolor sit amet, consetetur
+          sadipscing elitr, sed diam nonumy eirmod tempor
+          invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo
+          duo dolores et ea rebum. Stet clita kasd gubergren,
+          no sea takimata sanctus est Lorem ipsum dolor sit
+          amet. Lorem ipsum dolor sit amet, consetetur
+          sadipscing elitr, sed diam nonumy eirmod tempor
+          invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo
+          duo dolores et ea rebum. Stet clita kasd gubergren,
+          no sea takimata sanctus est Lorem ipsum dolor sit
+          amet.
+        </p>
+    </article>
+  </main>
+  
+  <script type="module">
+    import { HeaderContainer } from './js/components/header.js';
+    new HeaderContainer().render();
+  </script>
+  <script src="js/theme_button.js"></script>
+  <script src="js/font_size_slider.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
