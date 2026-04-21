@@ -5,98 +5,135 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.">
   <link rel="stylesheet" href="../css/global.css">
-  <title>CrivoAteu-Topics</title>
+  <title>CrivoAteu-FigurasDoAteismo</title>
 </head>
 <body>
   <main>
     <article>
       <h2>Figuras do ateísmo</h2>
       
-      <h3>Figuras importantes</h3>
-      <ul>
-        <li>
+      <section id="filters">
+        <button class="filter-btn activated" data-filter="all">Todos</button>
+      
+        <button class="filter-btn" data-filter="filosofia">Filosofia</button>
+        <button class="filter-btn" data-filter="ciencia">Ciência</button>
+        <button class="filter-btn" data-filter="literatura">Literatura</button>
+        <button class="filter-btn" data-filter="jornalismo">Jornalismo</button>
+      
+        <button class="filter-btn" data-filter="divulgacao">Divulgação</button>
+        <button class="filter-btn" data-filter="politica">Política</button>
+      
+        <button class="filter-btn" data-filter="ateismo">Ateísmo</button>
+        <button class="filter-btn" data-filter="ceticismo">Ceticismo</button>
+        <button class="filter-btn" data-filter="critica-religiao">Crítica à religião</button>
+      
+        <button class="filter-btn" data-filter="brasil">Brasil</button>
+      </section>
+      
+      <div id="input-box">
+        <div id="search-text">Search</div>
+        <div id="search-box">
+          <input id="search">
+          <div id="search-suggestion-box" hidden></div>
+        </div>
+      </div>
+      
+      <ul id="people-list">
+        <!-- Cientistas / divulgação -->
+        <li data-tags="ciencia, biologia, evolucao, divulgacao, ateismo">
           <a href="figuras-do-ateismo/richard-dawkins.html">Richard Dawkins</a>
         </li>
-        <li>
-          <a href="#">Sam Harris</a>
-        </li>
-        <li>
-          <a href="#">Christopher Hitchens</a>
-        </li>
-        <li>
-          <a href="#">Daniel Dannett</a>
-        </li>
-        
-        <li>
-          <a href="#">Mario Bunge</a>
-        </li>
-      </ul>
       
-      <h3>Filosofos e pensadores</h3>
-      <ul>
-        <li>
-          <a href="#">Arthur Schopenhauer</a>
-        </li>
-        
-        <li>
-          <a href="#">Friedrich Nietzsche</a>
-        </li>
-        
-        <li>
-          <a href="#">Barão d'Holbach</a>
-        </li>
-        
-        <li>
-          <a href="#">Jean-Paul Sartre</a>
-        </li>
-        
-        <li>
-          <a href="#">Karl Marx</a>
-        </li>
-      </ul>
-      
-      <h3>Acadêmicos</h3>
-      <ul>
-        <li>
-          <a href="#">Rebecca Goldstein</a>
-        </li>
-        <li>
+        <li data-tags="ciencia, astronomia, divulgacao, ceticismo">
           <a href="#">Carl Sagan</a>
         </li>
-        <li>
-          <a href="#">Bertrand Russell</a>
+      
+        <li data-tags="ciencia, fisica, cosmologia">
+          <a href="#">Stephen Hawking</a>
         </li>
-        <li>
-          <a href="#">Albert Camus</a>
-        </li>
-        <li>
+      
+        <li data-tags="ciencia, bioquimica, literatura, ficcao-cientifica">
           <a href="#">Isaac Asimov</a>
         </li>
-        <li>
-          <a href="#">Stephen Halking</a>
-        </li>
-      </ul>
       
-      <h3>Figuras populares</h3>
-      <ul>
-        <li>
+        <li data-tags="ciencia, fisica, filosofia, realismo-cientifico">
+          <a href="#">Mario Bunge</a>
+        </li>
+      
+      
+        <!-- Filósofos / pensamento -->
+        <li data-tags="filosofia, mente, ciencia-cognitiva, ateismo">
+          <a href="#">Daniel Dennett</a>
+        </li>
+      
+        <li data-tags="filosofia, neurociencia, etica, ateismo">
+          <a href="#">Sam Harris</a>
+        </li>
+      
+        <li data-tags="filosofia, analitica, logica, ateismo">
+          <a href="#">Bertrand Russell</a>
+        </li>
+      
+        <li data-tags="filosofia, existencialismo, absurdo, ateismo">
+          <a href="#">Jean-Paul Sartre</a>
+        </li>
+      
+        <li data-tags="filosofia, pessimismo, metafisica">
+          <a href="#">Arthur Schopenhauer</a>
+        </li>
+      
+        <li data-tags="filosofia, niilismo, critica-religiao">
+          <a href="#">Friedrich Nietzsche</a>
+        </li>
+      
+        <li data-tags="filosofia, materialismo, iluminismo, ateismo">
+          <a href="#">Barão d'Holbach</a>
+        </li>
+      
+        <li data-tags="filosofia, materialismo, politica, critica-religiao">
+          <a href="#">Karl Marx</a>
+        </li>
+      
+        <li data-tags="filosofia, historia, iluminismo">
+          <a href="#">Rebecca Goldstein</a>
+        </li>
+      
+      
+        <!-- Escritores / ensaístas -->
+        <li data-tags="jornalismo, politica, critica-religiao, ateismo">
+          <a href="#">Christopher Hitchens</a>
+        </li>
+      
+        <li data-tags="literatura, filosofia, existencialismo, absurdo">
+          <a href="#">Albert Camus</a>
+        </li>
+      
+      
+        <!-- Figuras públicas (Brasil) -->
+        <li data-tags="medicina, divulgacao, ciencia, brasil">
           <a href="#">Drauzio Varella</a>
         </li>
-        <li>
+      
+        <li data-tags="musica, literatura, cultura, brasil">
           <a href="#">Chico Buarque</a>
         </li>
-        <li>
+      
+        <li data-tags="televisao, atuacao, brasil">
           <a href="#">Lima Duarte</a>
         </li>
-        <li>
+      
+        <li data-tags="televisao, atuacao, brasil">
           <a href="#">Antônio Fagundes</a>
         </li>
-        <li>
+      
+        <li data-tags="televisao, atuacao, brasil">
           <a href="#">Camila Pitanga</a>
         </li>
-        <li>
+      
+        <li data-tags="humor, internet, divulgacao, brasil">
           <a href="#">Fábio Porchat</a>
         </li>
+      
       </ul>
       
       <p>
@@ -257,9 +294,14 @@
   
   <script type="module">
     import { HeaderContainer } from '../js/components/header.js';
+    import { TagFilter } from "../js/tagfilter.js"
+    
     new HeaderContainer(1, {
       "figuras do ateísmo": "#"
     }, "topics").render();
+    
+    new TagFilter("#people-list", "#filters").init(); 
   </script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

@@ -1,20 +1,29 @@
 :root {
+  /*color-names*/
   --milkglass: #F2F0E7;
   --chocolate: #493327;
   --dark-chocolate: #2D231B;
+  
+  /*light-colors*/
   --light-bg-color: var(--milkglass);
+  
+  /*dark-colors*/
   --dark-bg-color: var(--dark-chocolate);
-  --bg-color: var(--light-bg-color);
-  --header-container-color: var(--milkglass);
+  
+  /*colors*/
   --color1: var(--milkglass);
   --color2: #895129;
   --color3: var(--chocolate);
   --color4: #bc9e8260;
+  --color5: var(--dark-chocolate);
+  
+  /*element-colors*/
+  --bg-color: var(--light-bg-color);
+  --header-container-color: var(--milkglass);
   --boxes-border-color: black;
   --font-color: black;
   --activated-navlink-color: var(--color2);
   --activated-navlink-font-color: white;
-  --global-font-size: 1em;
 }
 
 :root.dark {
@@ -29,11 +38,6 @@
 * {
   padding: 0px;
   margin: 0px;
-}
-
-h3 {
-  padding: 10px;
-  margin: 5px 20px;
 }
 
 a {
@@ -160,14 +164,18 @@ main {
   padding-top: 160px;
 }
 
+main h3 {
+  padding: 10px;
+  margin: 5px 20px;
+}
+
 main article {
   background-color: var(--header-container-color);
   border: 3px solid var(--boxes-border-color);
-  max-width: 600px;
-  width: 85%;
   padding: 10px;
   margin: 30px auto;
   transition: 1s ease;
+  width: clamp(375px, 85%, 600px);
 }
 
 main article:hover {
@@ -188,6 +196,7 @@ main article h2:hover {
 }
 
 main article p {
+  text-wrap: balance;
   background-color: white;
   text-align: justify;
   padding: 20px;
@@ -213,12 +222,16 @@ ul a {
   padding: 5px;
   color: black;
   text-decoration: none;
-  transition: 0.5s ease;
+  transition: 0.5s;
 }
 
 ul a:hover {
-  padding: 3px;
+  padding: 7px;
   text-decoration: underline;
+}
+
+li li {
+  list-style-type: lower-roman;
 }
 
 .twocol {
@@ -270,4 +283,91 @@ button:active {
   background: green;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.news {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 10px;
+  transition: 0.5s ease;
+  margin: 15px 10px;
+}
+
+.news:hover {
+  padding: 15px;
+}
+
+.news * {
+  margin: 2px;
+  padding: 5px;
+}
+
+
+.news img {
+  height: 100px;
+  width: 600vw;
+  object-fit: cover;
+  background-color: cyan;
+}
+
+.news a {
+  background-color: burlywood;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.news .date {
+  display: flex;
+  align-self: flex-end;
+  color: #00000075;
+}
+
+#filters {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#filters button.activated {
+  padding: 15px;
+  text-decoration: underline;
+}
+
+#input-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+#input-box input {
+  height: clamp(25px, 5vw, 40px);
+  width: 100%;
+}
+
+#search-suggestion-box {
+  background-color: gray;
+  width: 100%;
+}
+
+#search-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  align-self: flex-start;
+  background-color: #50505050;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+
+#search-text {
+  align-self: flex-start;
 }
